@@ -1,7 +1,7 @@
 {
     "name": "dmishh/settings-bundle",
-    "description": "Database centric Symfony2 configuration management. Global and per-user settings supported. It just works.",
-    "keywords": ["symfony2", "bundle", "config", "configuration", "settings"],
+    "description": "Database centric Symfony configuration management. Global and per-user settings supported.",
+    "keywords": ["symfony", "bundle", "config", "configuration", "settings"],
     "homepage": "https://github.com/dmishh/SettingsBundle",
     "type": "symfony-bundle",
     "license": "MIT",
@@ -15,26 +15,26 @@
             "homepage": "https://github.com/Nyholm"
         },
         {
-            "name": "Artem Zhuravlov",
-            "homepage": "https://github.com/azhuravlov"
+            "name": "Richard van Laak",
+            "homepage": "https://github.com/rvanlaak"
         }
     ],
     "require": {
-        "php": ">=5.3.3",
-        "symfony/framework-bundle": "~2.1,!=2.5.0",
-        "symfony/security": "~2.1,!=2.5.0",
-        "symfony/form": "~2.1,!=2.5.0",
-        "symfony/validator": "~2.1,!=2.5.0",
-        "symfony/translation": "~2.1,!=2.5.0",
-        "doctrine/orm": "~2.2,>=2.2.3"
+        "php": "^5.5.9|^7.0",
+        "psr/cache": "^1.0",
+        "symfony/framework-bundle": "^2.7|^3.0",
+        "symfony/form": "^2.7|^3.0",
+        "doctrine/orm": "^2.2.3"
     },
     "require-dev": {
-        "phpunit/phpunit": "~4.6",
-        "mockery/mockery": "0.9.*",
-        "doctrine/orm": "<2.5"
+        "phpunit/phpunit": "^4.6",
+        "mockery/mockery": "^0.9",
+        "doctrine/doctrine-bundle": "~1.2",
+        "polishsymfonycommunity/symfony-mocker-container": "^1.0",
+        "matthiasnoback/symfony-dependency-injection-test": "^0.7"
     },
     "autoload": {
-        "psr-0": { "": "src/" }
+        "psr-4": { "Dmishh\\SettingsBundle\\": "" }
     },
     "extra": {
         "branch-alias": {
@@ -42,6 +42,6 @@
         }
     },
     "suggest": {
-        "doctrine/doctrine-cache-bundle": "If you want to add caching to your settings"
+        "cache/adapter-bundle": "This bundle will help you to add your PSR-6 cache implementations as Symfony services"
     }
 }
